@@ -1,0 +1,5878 @@
+{
+  "ranAt": "2026-10-10T21:55:57.789Z",
+  "jevModel": "typesafe/jev-1.13",
+  "llms": [
+    "google/gemini-2.5-flash-lite",
+    "openai/gpt-5.6-luna"
+  ],
+  "thresholds": [
+    0.5,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "provenance": "Non-English lines were drafted by an AI and read by one native Urdu speaker, who judged them accurate. They are not real customer messages.",
+  "faq": [
+    {
+      "id": "prices",
+      "topic": "Prices",
+      "answer": "Our cakes start at Rs 2,500 for 1 pound and Rs 4,500 for 2 pounds. Cupcakes are Rs 250 each, minimum 6.",
+      "keywords": [
+        "price",
+        "prices",
+        "cost",
+        "rate",
+        "how much"
+      ]
+    },
+    {
+      "id": "hours",
+      "topic": "Opening hours",
+      "answer": "We are open Monday to Saturday, 10am to 8pm. We are closed on Sundays.",
+      "keywords": [
+        "open",
+        "hours",
+        "timing",
+        "timings",
+        "closed"
+      ]
+    },
+    {
+      "id": "location",
+      "topic": "Where we are",
+      "answer": "We are at Shop 4, Khayaban-e-Bukhari, DHA Phase 6, Karachi. Pickup is from the shop.",
+      "keywords": [
+        "address",
+        "location",
+        "where",
+        "shop",
+        "pickup"
+      ]
+    },
+    {
+      "id": "delivery",
+      "topic": "Delivery",
+      "answer": "We deliver in DHA, Clifton, PECHS and Gulshan. Delivery is Rs 300. Orders placed before 2pm can be delivered the same day.",
+      "keywords": [
+        "delivery",
+        "deliver",
+        "shipping",
+        "home delivery"
+      ]
+    },
+    {
+      "id": "payment",
+      "topic": "How to pay",
+      "answer": "You can pay cash on delivery, by bank transfer, or with Easypaisa or JazzCash. We do not take cards.",
+      "keywords": [
+        "payment",
+        "pay",
+        "cash",
+        "card",
+        "easypaisa",
+        "jazzcash"
+      ]
+    },
+    {
+      "id": "custom",
+      "topic": "Custom cakes",
+      "answer": "Custom designs need 2 days' notice. Send us a picture of the design and the size you want, and we will confirm the price.",
+      "keywords": [
+        "custom",
+        "design",
+        "customize",
+        "theme",
+        "birthday cake"
+      ]
+    },
+    {
+      "id": "dietary",
+      "topic": "Eggless and sugar-free",
+      "answer": "Eggless cakes are available on request at no extra charge. We do not make sugar-free cakes.",
+      "keywords": [
+        "eggless",
+        "egg",
+        "sugar free",
+        "sugar-free",
+        "diabetic",
+        "vegan"
+      ]
+    },
+    {
+      "id": "changes",
+      "topic": "Changing or cancelling an order",
+      "answer": "You can change or cancel an order up to 24 hours before pickup or delivery. After that the cake is already being made and we cannot refund it.",
+      "keywords": [
+        "cancel",
+        "refund",
+        "change order",
+        "change my order",
+        "reschedule"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "prices/direct/en",
+      "lang": "en",
+      "style": "direct",
+      "message": "What are your cake prices?",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "prices/indirect/en",
+      "lang": "en",
+      "style": "indirect",
+      "message": "How much would a small one set me back?",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "prices/messy/en",
+      "lang": "en",
+      "style": "messy",
+      "message": "hw much 2 pound",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "hours/direct/en",
+      "lang": "en",
+      "style": "direct",
+      "message": "What are your opening hours?",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "hours/indirect/en",
+      "lang": "en",
+      "style": "indirect",
+      "message": "Can I come by at 9 tonight?",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "hours/messy/en",
+      "lang": "en",
+      "style": "messy",
+      "message": "u guys open rn?",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "location/direct/en",
+      "lang": "en",
+      "style": "direct",
+      "message": "What is your address?",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "location/indirect/en",
+      "lang": "en",
+      "style": "indirect",
+      "message": "How do I find you?",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "location/messy/en",
+      "lang": "en",
+      "style": "messy",
+      "message": "loc pls",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/direct/en",
+      "lang": "en",
+      "style": "direct",
+      "message": "Do you deliver?",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/indirect/en",
+      "lang": "en",
+      "style": "indirect",
+      "message": "Can you bring it to Clifton by this evening?",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/messy/en",
+      "lang": "en",
+      "style": "messy",
+      "message": "dlvry to pechs?",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "payment/direct/en",
+      "lang": "en",
+      "style": "direct",
+      "message": "What payment methods do you accept?",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "payment/indirect/en",
+      "lang": "en",
+      "style": "indirect",
+      "message": "Is it okay if I settle up when it arrives?",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "payment/messy/en",
+      "lang": "en",
+      "style": "messy",
+      "message": "cod available??",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "custom/direct/en",
+      "lang": "en",
+      "style": "direct",
+      "message": "Do you make custom cakes?",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "custom/indirect/en",
+      "lang": "en",
+      "style": "indirect",
+      "message": "I have a picture of what my daughter wants, can you do it for Saturday?",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "custom/messy/en",
+      "lang": "en",
+      "style": "messy",
+      "message": "can u do unicorn one",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/direct/en",
+      "lang": "en",
+      "style": "direct",
+      "message": "Do you have eggless cakes?",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/indirect/en",
+      "lang": "en",
+      "style": "indirect",
+      "message": "My father is diabetic, is there anything he can have?",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/messy/en",
+      "lang": "en",
+      "style": "messy",
+      "message": "no egg one?",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "changes/direct/en",
+      "lang": "en",
+      "style": "direct",
+      "message": "Can I cancel my order?",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "changes/indirect/en",
+      "lang": "en",
+      "style": "indirect",
+      "message": "The party got moved, can we push it to next week?",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "changes/messy/en",
+      "lang": "en",
+      "style": "messy",
+      "message": "need 2 cancel, refund?",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "none/order-status/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "Where is my order? It was supposed to be here an hour ago.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/complaint/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "The cake arrived completely squashed. I want to speak to someone.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/job-enquiry/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "Are you hiring? I am a trained baker.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/wholesale/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "I run a cafe. Do you supply in bulk at wholesale rates?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/thanks/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "Okay, thank you!",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/greeting/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "Hello, good morning",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/compliment/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "The cake was delicious, everyone loved it.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/recipe-request/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "Can you share the recipe for your chocolate fudge?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/baking-classes/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "Do you run baking classes?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/invoice-request/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "I need a tax invoice with my company name on it.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/wrong-number/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "Is this the plumber? My tap is leaking.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/a-product-the-answers-do-not-mention/en",
+      "lang": "en",
+      "style": "uncovered",
+      "message": "Do you make sandwiches for office lunches?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "prices/direct/roman",
+      "lang": "roman",
+      "style": "direct",
+      "message": "Aap ke cake ki qeemat kya hai?",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "prices/indirect/roman",
+      "lang": "roman",
+      "style": "indirect",
+      "message": "Chota wala kitne ka parega?",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "prices/messy/roman",
+      "lang": "roman",
+      "style": "messy",
+      "message": "2 pond kitnay ka hy",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "hours/direct/roman",
+      "lang": "roman",
+      "style": "direct",
+      "message": "Aap ki dukaan kis waqt khulti hai?",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "hours/indirect/roman",
+      "lang": "roman",
+      "style": "indirect",
+      "message": "Kya main raat 9 baje aa sakta hoon?",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "hours/messy/roman",
+      "lang": "roman",
+      "style": "messy",
+      "message": "abhi khuli hy dukan",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "location/direct/roman",
+      "lang": "roman",
+      "style": "direct",
+      "message": "Aap ka pata kya hai?",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "location/indirect/roman",
+      "lang": "roman",
+      "style": "indirect",
+      "message": "Aap tak kaise pohanchun?",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "location/messy/roman",
+      "lang": "roman",
+      "style": "messy",
+      "message": "kahan ho ap log",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/direct/roman",
+      "lang": "roman",
+      "style": "direct",
+      "message": "Kya aap ghar par pohancha dete hain?",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/indirect/roman",
+      "lang": "roman",
+      "style": "indirect",
+      "message": "Aaj shaam tak Clifton bhijwa sakte hain?",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/messy/roman",
+      "lang": "roman",
+      "style": "messy",
+      "message": "pechs tk aa jaega kya",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "payment/direct/roman",
+      "lang": "roman",
+      "style": "direct",
+      "message": "Paise kaise dene hain?",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "payment/indirect/roman",
+      "lang": "roman",
+      "style": "indirect",
+      "message": "Jab cake aaye tab paise de dun?",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "payment/messy/roman",
+      "lang": "roman",
+      "style": "messy",
+      "message": "card se de skty hain",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "custom/direct/roman",
+      "lang": "roman",
+      "style": "direct",
+      "message": "Kya aap apni marzi ka design bana dete hain?",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "custom/indirect/roman",
+      "lang": "roman",
+      "style": "indirect",
+      "message": "Meri beti ko jo chahiye uski tasveer hai, Saturday tak ban jaega?",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "custom/messy/roman",
+      "lang": "roman",
+      "style": "messy",
+      "message": "tasveer wala bn jaega kya",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/direct/roman",
+      "lang": "roman",
+      "style": "direct",
+      "message": "Kya baghair anday ka cake milta hai?",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/indirect/roman",
+      "lang": "roman",
+      "style": "indirect",
+      "message": "Mere abbu ko sugar hai, unke liye kuch hai?",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/messy/roman",
+      "lang": "roman",
+      "style": "messy",
+      "message": "anda nhi khate hum",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "changes/direct/roman",
+      "lang": "roman",
+      "style": "direct",
+      "message": "Kya main apna order mansookh kar sakta hoon?",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "changes/indirect/roman",
+      "lang": "roman",
+      "style": "indirect",
+      "message": "Dawat agle hafte ho gayi hai, cake bhi agle hafte kar dein?",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "changes/messy/roman",
+      "lang": "roman",
+      "style": "messy",
+      "message": "order nhi chahiye ab paisay wapis",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "none/order-status/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Mera order kahan hai? Ek ghanta pehle aana tha.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/complaint/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Cake bilkul kharab haalat mein aaya hai. Mujhe kisi se baat karni hai.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/job-enquiry/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Kya aap ke paas naukri hai? Main baking janti hoon.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/wholesale/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Mera cafe hai. Kya aap thok mein maal dete hain?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/thanks/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Theek hai, shukriya!",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/greeting/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Assalam o alaikum",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/compliment/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Cake bohat mazedar tha, sab ko pasand aaya.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/recipe-request/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Chocolate fudge banane ka tareeqa bata dein?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/baking-classes/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Kya aap baking sikhate hain?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/invoice-request/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Mujhe company ke naam ki raseed chahiye, tax wali.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/wrong-number/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Kya yeh plumber ka number hai? Nal se pani tapak raha hai.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/a-product-the-answers-do-not-mention/roman",
+      "lang": "roman",
+      "style": "uncovered",
+      "message": "Kya aap daftar ke khane ke liye sandwich banate hain?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "prices/direct/urdu",
+      "lang": "urdu",
+      "style": "direct",
+      "message": "آپ کے کیک کی قیمت کیا ہے؟",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "prices/indirect/urdu",
+      "lang": "urdu",
+      "style": "indirect",
+      "message": "چھوٹا والا کتنے کا پڑے گا؟",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "prices/messy/urdu",
+      "lang": "urdu",
+      "style": "messy",
+      "message": "دو پاؤنڈ کتنے کا",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "hours/direct/urdu",
+      "lang": "urdu",
+      "style": "direct",
+      "message": "آپ کی دکان کس وقت کھلتی ہے؟",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "hours/indirect/urdu",
+      "lang": "urdu",
+      "style": "indirect",
+      "message": "کیا میں رات نو بجے آ سکتا ہوں؟",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "hours/messy/urdu",
+      "lang": "urdu",
+      "style": "messy",
+      "message": "ابھی کھلا ہے",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "location/direct/urdu",
+      "lang": "urdu",
+      "style": "direct",
+      "message": "آپ کا پتہ کیا ہے؟",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "location/indirect/urdu",
+      "lang": "urdu",
+      "style": "indirect",
+      "message": "آپ تک کیسے پہنچوں؟",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "location/messy/urdu",
+      "lang": "urdu",
+      "style": "messy",
+      "message": "کہاں ہیں آپ",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/direct/urdu",
+      "lang": "urdu",
+      "style": "direct",
+      "message": "کیا آپ گھر پر پہنچا دیتے ہیں؟",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/indirect/urdu",
+      "lang": "urdu",
+      "style": "indirect",
+      "message": "آج شام تک کلفٹن بھجوا سکتے ہیں؟",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/messy/urdu",
+      "lang": "urdu",
+      "style": "messy",
+      "message": "پی ای سی ایچ ایس تک آ جائے گا",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "payment/direct/urdu",
+      "lang": "urdu",
+      "style": "direct",
+      "message": "پیسے کیسے دینے ہیں؟",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "payment/indirect/urdu",
+      "lang": "urdu",
+      "style": "indirect",
+      "message": "جب کیک آئے تب پیسے دے دوں؟",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "payment/messy/urdu",
+      "lang": "urdu",
+      "style": "messy",
+      "message": "کارڈ چلتا ہے",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "custom/direct/urdu",
+      "lang": "urdu",
+      "style": "direct",
+      "message": "کیا آپ اپنی مرضی کا ڈیزائن بنا دیتے ہیں؟",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "custom/indirect/urdu",
+      "lang": "urdu",
+      "style": "indirect",
+      "message": "میری بیٹی کو جو چاہیے اس کی تصویر ہے، ہفتے تک بن جائے گا؟",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "custom/messy/urdu",
+      "lang": "urdu",
+      "style": "messy",
+      "message": "تصویر والا بن جائے گا",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/direct/urdu",
+      "lang": "urdu",
+      "style": "direct",
+      "message": "کیا بغیر انڈے کا کیک ملتا ہے؟",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/indirect/urdu",
+      "lang": "urdu",
+      "style": "indirect",
+      "message": "میرے ابو کو شوگر ہے، ان کے لیے کچھ ہے؟",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/messy/urdu",
+      "lang": "urdu",
+      "style": "messy",
+      "message": "انڈے کے بغیر",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "changes/direct/urdu",
+      "lang": "urdu",
+      "style": "direct",
+      "message": "کیا میں اپنا آرڈر منسوخ کر سکتا ہوں؟",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "changes/indirect/urdu",
+      "lang": "urdu",
+      "style": "indirect",
+      "message": "دعوت اگلے ہفتے ہو گئی ہے، کیک بھی اگلے ہفتے کر دیں؟",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "changes/messy/urdu",
+      "lang": "urdu",
+      "style": "messy",
+      "message": "آرڈر نہیں چاہیے پیسے واپس",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "none/order-status/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "میرا آرڈر کہاں ہے؟ ایک گھنٹہ پہلے آنا تھا۔",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/complaint/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "کیک بالکل خراب حالت میں آیا ہے۔ مجھے کسی سے بات کرنی ہے۔",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/job-enquiry/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "کیا آپ کے پاس نوکری ہے؟ میں بیکنگ جانتی ہوں۔",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/wholesale/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "میرا کیفے ہے۔ کیا آپ تھوک میں مال دیتے ہیں؟",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/thanks/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "ٹھیک ہے، شکریہ!",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/greeting/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "السلام علیکم",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/compliment/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "کیک بہت مزیدار تھا، سب کو پسند آیا۔",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/recipe-request/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "چاکلیٹ فج بنانے کا طریقہ بتا دیں؟",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/baking-classes/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "کیا آپ بیکنگ سکھاتے ہیں؟",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/invoice-request/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "مجھے کمپنی کے نام کی رسید چاہیے، ٹیکس والی۔",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/wrong-number/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "کیا یہ پلمبر کا نمبر ہے؟ نل سے پانی ٹپک رہا ہے۔",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/a-product-the-answers-do-not-mention/urdu",
+      "lang": "urdu",
+      "style": "uncovered",
+      "message": "کیا آپ دفتر کے کھانے کے لیے سینڈوچ بناتے ہیں؟",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "prices/direct/mixed",
+      "lang": "mixed",
+      "style": "direct",
+      "message": "Cake ke prices kya hain?",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "prices/indirect/mixed",
+      "lang": "mixed",
+      "style": "indirect",
+      "message": "Ek pound wala kitne ka hai?",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "prices/messy/mixed",
+      "lang": "mixed",
+      "style": "messy",
+      "message": "rate btao 2 pound ka",
+      "expect": "prices",
+      "reviewed": true
+    },
+    {
+      "id": "hours/direct/mixed",
+      "lang": "mixed",
+      "style": "direct",
+      "message": "Shop ki timings kya hain?",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "hours/indirect/mixed",
+      "lang": "mixed",
+      "style": "indirect",
+      "message": "Sunday ko aa sakti hoon?",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "hours/messy/mixed",
+      "lang": "mixed",
+      "style": "messy",
+      "message": "open ho abhi?",
+      "expect": "hours",
+      "reviewed": true
+    },
+    {
+      "id": "location/direct/mixed",
+      "lang": "mixed",
+      "style": "direct",
+      "message": "Shop ka address bhej dein",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "location/indirect/mixed",
+      "lang": "mixed",
+      "style": "indirect",
+      "message": "Kahan se collect karna hai?",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "location/messy/mixed",
+      "lang": "mixed",
+      "style": "messy",
+      "message": "location send kro",
+      "expect": "location",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/direct/mixed",
+      "lang": "mixed",
+      "style": "direct",
+      "message": "Home delivery hai kya?",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/indirect/mixed",
+      "lang": "mixed",
+      "style": "indirect",
+      "message": "Gulshan mein bhej dete ho? charges kitne hain",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "delivery/messy/mixed",
+      "lang": "mixed",
+      "style": "messy",
+      "message": "delivry krte ho dha me",
+      "expect": "delivery",
+      "reviewed": true
+    },
+    {
+      "id": "payment/direct/mixed",
+      "lang": "mixed",
+      "style": "direct",
+      "message": "Payment kaise karni hai?",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "payment/indirect/mixed",
+      "lang": "mixed",
+      "style": "indirect",
+      "message": "Easypaisa chalta hai?",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "payment/messy/mixed",
+      "lang": "mixed",
+      "style": "messy",
+      "message": "jazzcash pe bhej dun",
+      "expect": "payment",
+      "reviewed": true
+    },
+    {
+      "id": "custom/direct/mixed",
+      "lang": "mixed",
+      "style": "direct",
+      "message": "Custom design ka cake banate hain?",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "custom/indirect/mixed",
+      "lang": "mixed",
+      "style": "indirect",
+      "message": "Spiderman theme ka cake chahiye, kitne din pehle batana hoga?",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "custom/messy/mixed",
+      "lang": "mixed",
+      "style": "messy",
+      "message": "pic bhejun design ki?",
+      "expect": "custom",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/direct/mixed",
+      "lang": "mixed",
+      "style": "direct",
+      "message": "Eggless cake milega?",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/indirect/mixed",
+      "lang": "mixed",
+      "style": "indirect",
+      "message": "Sugar free option hai aap ke paas?",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "dietary/messy/mixed",
+      "lang": "mixed",
+      "style": "messy",
+      "message": "bina egg k bna dein",
+      "expect": "dietary",
+      "reviewed": true
+    },
+    {
+      "id": "changes/direct/mixed",
+      "lang": "mixed",
+      "style": "direct",
+      "message": "Order cancel ho sakta hai?",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "changes/indirect/mixed",
+      "lang": "mixed",
+      "style": "indirect",
+      "message": "Party postpone ho gayi, date change kar sakte hain?",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "changes/messy/mixed",
+      "lang": "mixed",
+      "style": "messy",
+      "message": "cancel krna hy refund milega",
+      "expect": "changes",
+      "reviewed": true
+    },
+    {
+      "id": "none/order-status/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Mera order abhi tak nahi aya, rider kahan hai?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/complaint/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Cake damage ho kar aya hai, manager se baat karwa dein.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/job-enquiry/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Koi job vacancy hai aap ke paas?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/wholesale/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Cafe ke liye wholesale supply karte hain?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/thanks/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Ok thanks, JazakAllah",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/greeting/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Salam, hi",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/compliment/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Cake bohat tasty tha, sab ne tareef ki.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/recipe-request/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Chocolate fudge ki recipe share kar dein?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/baking-classes/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Baking classes hoti hain aap ke haan?",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/invoice-request/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Company ke naam pe tax invoice bana dein.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/wrong-number/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Plumber sahab? tap leak ho raha hai.",
+      "expect": "none",
+      "reviewed": true
+    },
+    {
+      "id": "none/a-product-the-answers-do-not-mention/mixed",
+      "lang": "mixed",
+      "style": "uncovered",
+      "message": "Office lunch ke liye sandwiches bana dete hain?",
+      "expect": "none",
+      "reviewed": true
+    }
+  ],
+  "outcomes": [
+    {
+      "contender": "keywords",
+      "caseId": "prices/direct/en",
+      "latencyMs": 0,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/indirect/en",
+      "latencyMs": 0,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/messy/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/direct/en",
+      "latencyMs": 0,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/indirect/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/messy/en",
+      "latencyMs": 0,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/direct/en",
+      "latencyMs": 0,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/indirect/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/messy/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/direct/en",
+      "latencyMs": 0,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/indirect/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/messy/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/direct/en",
+      "latencyMs": 0,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/indirect/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/messy/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/direct/en",
+      "latencyMs": 0,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/indirect/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/messy/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/direct/en",
+      "latencyMs": 0,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/indirect/en",
+      "latencyMs": 0,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/messy/en",
+      "latencyMs": 0,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/direct/en",
+      "latencyMs": 0,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/indirect/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/messy/en",
+      "latencyMs": 0,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/order-status/en",
+      "latencyMs": 0,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/complaint/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/job-enquiry/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/wholesale/en",
+      "latencyMs": 0,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/thanks/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/greeting/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/compliment/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/recipe-request/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/baking-classes/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/invoice-request/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/wrong-number/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/a-product-the-answers-do-not-mention/en",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/direct/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/indirect/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/messy/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/direct/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/indirect/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/messy/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/direct/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/indirect/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/messy/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/direct/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/indirect/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/messy/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/direct/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/indirect/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/messy/roman",
+      "latencyMs": 0,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/direct/roman",
+      "latencyMs": 0,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/indirect/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/messy/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/direct/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/indirect/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/messy/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/direct/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/indirect/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/messy/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/order-status/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/complaint/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/job-enquiry/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/wholesale/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/thanks/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/greeting/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/compliment/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/recipe-request/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/baking-classes/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/invoice-request/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/wrong-number/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/a-product-the-answers-do-not-mention/roman",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/direct/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/indirect/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/messy/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/direct/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/indirect/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/messy/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/direct/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/indirect/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/messy/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/direct/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/indirect/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/messy/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/direct/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/indirect/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/messy/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/direct/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/indirect/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/messy/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/direct/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/indirect/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/messy/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/direct/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/indirect/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/messy/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/order-status/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/complaint/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/job-enquiry/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/wholesale/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/thanks/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/greeting/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/compliment/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/recipe-request/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/baking-classes/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/invoice-request/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/wrong-number/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/a-product-the-answers-do-not-mention/urdu",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/direct/mixed",
+      "latencyMs": 0,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/indirect/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "prices/messy/mixed",
+      "latencyMs": 0,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/direct/mixed",
+      "latencyMs": 0,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/indirect/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "hours/messy/mixed",
+      "latencyMs": 0,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/direct/mixed",
+      "latencyMs": 0,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/indirect/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "location/messy/mixed",
+      "latencyMs": 0,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/direct/mixed",
+      "latencyMs": 0,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/indirect/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "delivery/messy/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/direct/mixed",
+      "latencyMs": 0,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/indirect/mixed",
+      "latencyMs": 0,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "payment/messy/mixed",
+      "latencyMs": 0,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/direct/mixed",
+      "latencyMs": 0,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/indirect/mixed",
+      "latencyMs": 0,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "custom/messy/mixed",
+      "latencyMs": 0,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/direct/mixed",
+      "latencyMs": 0,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/indirect/mixed",
+      "latencyMs": 0,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "dietary/messy/mixed",
+      "latencyMs": 0,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/direct/mixed",
+      "latencyMs": 0,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/indirect/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "changes/messy/mixed",
+      "latencyMs": 0,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/order-status/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/complaint/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/job-enquiry/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/wholesale/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/thanks/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/greeting/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/compliment/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/recipe-request/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/baking-classes/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/invoice-request/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/wrong-number/mixed",
+      "latencyMs": 1,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "keywords",
+      "caseId": "none/a-product-the-answers-do-not-mention/mixed",
+      "latencyMs": 0,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/direct/en",
+      "latencyMs": 973,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/indirect/en",
+      "latencyMs": 1040,
+      "choice": "prices",
+      "probability": 0.98,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/messy/en",
+      "latencyMs": 1225,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/direct/en",
+      "latencyMs": 1015,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/indirect/en",
+      "latencyMs": 957,
+      "choice": "hours",
+      "probability": 0.95,
+      "costUsd": 0.000046998
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/messy/en",
+      "latencyMs": 963,
+      "choice": "hours",
+      "probability": 0.98,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/direct/en",
+      "latencyMs": 598,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/indirect/en",
+      "latencyMs": 577,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/messy/en",
+      "latencyMs": 598,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.000046704
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/direct/en",
+      "latencyMs": 575,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.000046788
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/indirect/en",
+      "latencyMs": 582,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/messy/en",
+      "latencyMs": 1140,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/direct/en",
+      "latencyMs": 586,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/indirect/en",
+      "latencyMs": 607,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.000047082
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/messy/en",
+      "latencyMs": 606,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.000046746
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/direct/en",
+      "latencyMs": 627,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/indirect/en",
+      "latencyMs": 595,
+      "choice": "custom",
+      "probability": 0.99,
+      "costUsd": 0.000047334
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/messy/en",
+      "latencyMs": 1140,
+      "choice": "custom",
+      "probability": 0.97,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/direct/en",
+      "latencyMs": 611,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/indirect/en",
+      "latencyMs": 594,
+      "choice": "dietary",
+      "probability": 0.96,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/messy/en",
+      "latencyMs": 594,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.000046788
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/direct/en",
+      "latencyMs": 594,
+      "choice": "changes",
+      "probability": 0.97,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/indirect/en",
+      "latencyMs": 594,
+      "choice": "changes",
+      "probability": 0.92,
+      "costUsd": 0.000047166
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/messy/en",
+      "latencyMs": 594,
+      "choice": "changes",
+      "probability": 0.98,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/order-status/en",
+      "latencyMs": 546,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.00004725
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/complaint/en",
+      "latencyMs": 577,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004725
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/job-enquiry/en",
+      "latencyMs": 588,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/wholesale/en",
+      "latencyMs": 1123,
+      "choice": "none",
+      "probability": 0.95,
+      "costUsd": 0.000047208
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/thanks/en",
+      "latencyMs": 559,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/greeting/en",
+      "latencyMs": 585,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000046788
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/compliment/en",
+      "latencyMs": 611,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000046998
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/recipe-request/en",
+      "latencyMs": 616,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047082
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/baking-classes/en",
+      "latencyMs": 586,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/invoice-request/en",
+      "latencyMs": 586,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/wrong-number/en",
+      "latencyMs": 610,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/a-product-the-answers-do-not-mention/en",
+      "latencyMs": 637,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/direct/roman",
+      "latencyMs": 562,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.000047082
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/indirect/roman",
+      "latencyMs": 567,
+      "choice": "prices",
+      "probability": 0.91,
+      "costUsd": 0.000046998
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/messy/roman",
+      "latencyMs": 594,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/direct/roman",
+      "latencyMs": 1141,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/indirect/roman",
+      "latencyMs": 568,
+      "choice": "hours",
+      "probability": 0.96,
+      "costUsd": 0.00004725
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/messy/roman",
+      "latencyMs": 568,
+      "choice": "hours",
+      "probability": 0.94,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/direct/roman",
+      "latencyMs": 565,
+      "choice": "location",
+      "probability": 0.98,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/indirect/roman",
+      "latencyMs": 578,
+      "choice": "location",
+      "probability": 0.88,
+      "costUsd": 0.000046998
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/messy/roman",
+      "latencyMs": 558,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/direct/roman",
+      "latencyMs": 1169,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.000047166
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/indirect/roman",
+      "latencyMs": 587,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.00004725
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/messy/roman",
+      "latencyMs": 564,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/direct/roman",
+      "latencyMs": 1182,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/indirect/roman",
+      "latencyMs": 1181,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.000047082
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/messy/roman",
+      "latencyMs": 1181,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/direct/roman",
+      "latencyMs": 1262,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.000047208
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/indirect/roman",
+      "latencyMs": 1181,
+      "choice": "custom",
+      "probability": 0.89,
+      "costUsd": 0.000047544
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/messy/roman",
+      "latencyMs": 1181,
+      "choice": "custom",
+      "probability": 0.96,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/direct/roman",
+      "latencyMs": 584,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/indirect/roman",
+      "latencyMs": 642,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.00004725
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/messy/roman",
+      "latencyMs": 669,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/direct/roman",
+      "latencyMs": 583,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.00004725
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/indirect/roman",
+      "latencyMs": 1509,
+      "choice": "none",
+      "probability": 0.53,
+      "costUsd": 0.00004746
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/messy/roman",
+      "latencyMs": 583,
+      "choice": "changes",
+      "probability": 0.9,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/order-status/roman",
+      "latencyMs": 554,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047292
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/complaint/roman",
+      "latencyMs": 564,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047544
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/job-enquiry/roman",
+      "latencyMs": 811,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047418
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/wholesale/roman",
+      "latencyMs": 603,
+      "choice": "none",
+      "probability": 0.83,
+      "costUsd": 0.000047292
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/thanks/roman",
+      "latencyMs": 563,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000046998
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/greeting/roman",
+      "latencyMs": 562,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/compliment/roman",
+      "latencyMs": 559,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004725
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/recipe-request/roman",
+      "latencyMs": 527,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/baking-classes/roman",
+      "latencyMs": 559,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/invoice-request/roman",
+      "latencyMs": 572,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000047334
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/wrong-number/roman",
+      "latencyMs": 1242,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047334
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/a-product-the-answers-do-not-mention/roman",
+      "latencyMs": 558,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047292
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/direct/urdu",
+      "latencyMs": 644,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/indirect/urdu",
+      "latencyMs": 644,
+      "choice": "prices",
+      "probability": 0.99,
+      "costUsd": 0.000047376
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/messy/urdu",
+      "latencyMs": 662,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.000047208
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/direct/urdu",
+      "latencyMs": 642,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.000047418
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/indirect/urdu",
+      "latencyMs": 643,
+      "choice": "hours",
+      "probability": 0.97,
+      "costUsd": 0.000047502
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/messy/urdu",
+      "latencyMs": 643,
+      "choice": "hours",
+      "probability": 0.97,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/direct/urdu",
+      "latencyMs": 667,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/indirect/urdu",
+      "latencyMs": 538,
+      "choice": "location",
+      "probability": 0.9400000000000001,
+      "costUsd": 0.000047292
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/messy/urdu",
+      "latencyMs": 551,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/direct/urdu",
+      "latencyMs": 530,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.000047502
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/indirect/urdu",
+      "latencyMs": 566,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.000047586
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/messy/urdu",
+      "latencyMs": 530,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.000047292
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/direct/urdu",
+      "latencyMs": 541,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.00004725
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/indirect/urdu",
+      "latencyMs": 528,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.00004746
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/messy/urdu",
+      "latencyMs": 540,
+      "choice": "payment",
+      "probability": 0.98,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/direct/urdu",
+      "latencyMs": 521,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.000047796
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/indirect/urdu",
+      "latencyMs": 539,
+      "choice": "custom",
+      "probability": 0.89,
+      "costUsd": 0.000048048
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/messy/urdu",
+      "latencyMs": 668,
+      "choice": "custom",
+      "probability": 0.86,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/direct/urdu",
+      "latencyMs": 531,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.000047586
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/indirect/urdu",
+      "latencyMs": 707,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.000047502
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/messy/urdu",
+      "latencyMs": 529,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.000046998
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/direct/urdu",
+      "latencyMs": 1290,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.000047796
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/indirect/urdu",
+      "latencyMs": 554,
+      "choice": "none",
+      "probability": 0.47000000000000003,
+      "costUsd": 0.000048258
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/messy/urdu",
+      "latencyMs": 514,
+      "choice": "changes",
+      "probability": 0.78,
+      "costUsd": 0.000047502
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/order-status/urdu",
+      "latencyMs": 563,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000047964
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/complaint/urdu",
+      "latencyMs": 577,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047964
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/job-enquiry/urdu",
+      "latencyMs": 563,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004788
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/wholesale/urdu",
+      "latencyMs": 563,
+      "choice": "none",
+      "probability": 0.73,
+      "costUsd": 0.00004767
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/thanks/urdu",
+      "latencyMs": 563,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/greeting/urdu",
+      "latencyMs": 619,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047082
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/compliment/urdu",
+      "latencyMs": 668,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004767
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/recipe-request/urdu",
+      "latencyMs": 593,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004767
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/baking-classes/urdu",
+      "latencyMs": 611,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047334
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/invoice-request/urdu",
+      "latencyMs": 623,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000047964
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/wrong-number/urdu",
+      "latencyMs": 1113,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000048132
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/a-product-the-answers-do-not-mention/urdu",
+      "latencyMs": 675,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047754
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/direct/mixed",
+      "latencyMs": 619,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/indirect/mixed",
+      "latencyMs": 608,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "prices/messy/mixed",
+      "latencyMs": 619,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/direct/mixed",
+      "latencyMs": 568,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/indirect/mixed",
+      "latencyMs": 606,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "hours/messy/mixed",
+      "latencyMs": 645,
+      "choice": "hours",
+      "probability": 0.99,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/direct/mixed",
+      "latencyMs": 552,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/indirect/mixed",
+      "latencyMs": 1282,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "location/messy/mixed",
+      "latencyMs": 581,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.000046746
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/direct/mixed",
+      "latencyMs": 568,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.00004683
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/indirect/mixed",
+      "latencyMs": 551,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.000047166
+    },
+    {
+      "contender": "jev",
+      "caseId": "delivery/messy/mixed",
+      "latencyMs": 551,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/direct/mixed",
+      "latencyMs": 565,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/indirect/mixed",
+      "latencyMs": 813,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "payment/messy/mixed",
+      "latencyMs": 775,
+      "choice": "payment",
+      "probability": 0.75,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/direct/mixed",
+      "latencyMs": 835,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.000046956
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/indirect/mixed",
+      "latencyMs": 1348,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.000047502
+    },
+    {
+      "contender": "jev",
+      "caseId": "custom/messy/mixed",
+      "latencyMs": 782,
+      "choice": "custom",
+      "probability": 0.97,
+      "costUsd": 0.000046872
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/direct/mixed",
+      "latencyMs": 555,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/indirect/mixed",
+      "latencyMs": 555,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "jev",
+      "caseId": "dietary/messy/mixed",
+      "latencyMs": 555,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/direct/mixed",
+      "latencyMs": 531,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/indirect/mixed",
+      "latencyMs": 557,
+      "choice": "changes",
+      "probability": 0.97,
+      "costUsd": 0.000047166
+    },
+    {
+      "contender": "jev",
+      "caseId": "changes/messy/mixed",
+      "latencyMs": 567,
+      "choice": "changes",
+      "probability": 0.98,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/order-status/mixed",
+      "latencyMs": 551,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000047208
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/complaint/mixed",
+      "latencyMs": 571,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004725
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/job-enquiry/mixed",
+      "latencyMs": 604,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047082
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/wholesale/mixed",
+      "latencyMs": 571,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000047082
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/thanks/mixed",
+      "latencyMs": 1261,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000046914
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/greeting/mixed",
+      "latencyMs": 620,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000046788
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/compliment/mixed",
+      "latencyMs": 559,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/recipe-request/mixed",
+      "latencyMs": 552,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000046998
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/baking-classes/mixed",
+      "latencyMs": 558,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/invoice-request/mixed",
+      "latencyMs": 563,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000046998
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/wrong-number/mixed",
+      "latencyMs": 558,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000047124
+    },
+    {
+      "contender": "jev",
+      "caseId": "none/a-product-the-answers-do-not-mention/mixed",
+      "latencyMs": 551,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.00004704
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/direct/en",
+      "latencyMs": 816,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/indirect/en",
+      "latencyMs": 814,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/messy/en",
+      "latencyMs": 837,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000562
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/direct/en",
+      "latencyMs": 837,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/indirect/en",
+      "latencyMs": 846,
+      "choice": "hours",
+      "probability": 0.9,
+      "costUsd": 0.0000574
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/messy/en",
+      "latencyMs": 907,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0000562
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/direct/en",
+      "latencyMs": 859,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000562
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/indirect/en",
+      "latencyMs": 869,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/messy/en",
+      "latencyMs": 858,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/direct/en",
+      "latencyMs": 1113,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000561
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/indirect/en",
+      "latencyMs": 1140,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/messy/en",
+      "latencyMs": 858,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/direct/en",
+      "latencyMs": 1053,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/indirect/en",
+      "latencyMs": 1034,
+      "choice": "payment",
+      "probability": 0.9,
+      "costUsd": 0.0000576
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/messy/en",
+      "latencyMs": 927,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.0000569
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/direct/en",
+      "latencyMs": 875,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/indirect/en",
+      "latencyMs": 2419,
+      "choice": "custom",
+      "probability": 0.9,
+      "costUsd": 0.0000582
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/messy/en",
+      "latencyMs": 995,
+      "choice": "custom",
+      "probability": 0.9,
+      "costUsd": 0.000057
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/direct/en",
+      "latencyMs": 757,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000576
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/indirect/en",
+      "latencyMs": 838,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000581
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/messy/en",
+      "latencyMs": 1587,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000573
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/direct/en",
+      "latencyMs": 819,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/indirect/en",
+      "latencyMs": 838,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.0000578
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/messy/en",
+      "latencyMs": 819,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/order-status/en",
+      "latencyMs": 706,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/complaint/en",
+      "latencyMs": 838,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/job-enquiry/en",
+      "latencyMs": 826,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/wholesale/en",
+      "latencyMs": 1026,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/thanks/en",
+      "latencyMs": 780,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000562
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/greeting/en",
+      "latencyMs": 857,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000561
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/compliment/en",
+      "latencyMs": 871,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000566
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/recipe-request/en",
+      "latencyMs": 858,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/baking-classes/en",
+      "latencyMs": 1025,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/invoice-request/en",
+      "latencyMs": 1149,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000569
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/wrong-number/en",
+      "latencyMs": 1139,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/a-product-the-answers-do-not-mention/en",
+      "latencyMs": 1063,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000565
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/direct/roman",
+      "latencyMs": 806,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000568
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/indirect/roman",
+      "latencyMs": 814,
+      "choice": "prices",
+      "probability": 0.9,
+      "costUsd": 0.0000574
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/messy/roman",
+      "latencyMs": 873,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/direct/roman",
+      "latencyMs": 2364,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0000569
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/indirect/roman",
+      "latencyMs": 797,
+      "choice": "hours",
+      "probability": 0.9,
+      "costUsd": 0.0000576
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/messy/roman",
+      "latencyMs": 960,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/direct/roman",
+      "latencyMs": 2409,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000564
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/indirect/roman",
+      "latencyMs": 825,
+      "choice": "location",
+      "probability": 0.9,
+      "costUsd": 0.0000573
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/messy/roman",
+      "latencyMs": 802,
+      "choice": "location",
+      "probability": 0.9,
+      "costUsd": 0.000057
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/direct/roman",
+      "latencyMs": 931,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000566
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/indirect/roman",
+      "latencyMs": 892,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000575
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/messy/roman",
+      "latencyMs": 867,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000564
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/direct/roman",
+      "latencyMs": 948,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/indirect/roman",
+      "latencyMs": 801,
+      "choice": "payment",
+      "probability": 0.9,
+      "costUsd": 0.0000573
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/messy/roman",
+      "latencyMs": 878,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/direct/roman",
+      "latencyMs": 878,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.0000568
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/indirect/roman",
+      "latencyMs": 813,
+      "choice": "custom",
+      "probability": 0.9,
+      "costUsd": 0.0000583
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/messy/roman",
+      "latencyMs": 961,
+      "choice": "custom",
+      "probability": 0.8,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/direct/roman",
+      "latencyMs": 854,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.000058
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/indirect/roman",
+      "latencyMs": 925,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000574
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/messy/roman",
+      "latencyMs": 835,
+      "choice": "dietary",
+      "probability": 0.8,
+      "costUsd": 0.0000574
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/direct/roman",
+      "latencyMs": 924,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.0000576
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/indirect/roman",
+      "latencyMs": 1020,
+      "choice": "changes",
+      "probability": 0.8,
+      "costUsd": 0.0000584
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/messy/roman",
+      "latencyMs": 924,
+      "choice": "changes",
+      "probability": 0.9,
+      "costUsd": 0.0000573
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/order-status/roman",
+      "latencyMs": 813,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000581
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/complaint/roman",
+      "latencyMs": 812,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000576
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/job-enquiry/roman",
+      "latencyMs": 857,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000058
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/wholesale/roman",
+      "latencyMs": 812,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000057
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/thanks/roman",
+      "latencyMs": 857,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000573
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/greeting/roman",
+      "latencyMs": 947,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000562
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/compliment/roman",
+      "latencyMs": 862,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000569
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/recipe-request/roman",
+      "latencyMs": 861,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000566
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/baking-classes/roman",
+      "latencyMs": 779,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000565
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/invoice-request/roman",
+      "latencyMs": 741,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/wrong-number/roman",
+      "latencyMs": 809,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/a-product-the-answers-do-not-mention/roman",
+      "latencyMs": 787,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000057
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/direct/urdu",
+      "latencyMs": 1194,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000566
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/indirect/urdu",
+      "latencyMs": 1160,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000575
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/messy/urdu",
+      "latencyMs": 1237,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000564
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/direct/urdu",
+      "latencyMs": 1069,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/indirect/urdu",
+      "latencyMs": 1073,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/messy/urdu",
+      "latencyMs": 890,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0000569
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/direct/urdu",
+      "latencyMs": 919,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/indirect/urdu",
+      "latencyMs": 835,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/messy/urdu",
+      "latencyMs": 857,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000561
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/direct/urdu",
+      "latencyMs": 834,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000574
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/indirect/urdu",
+      "latencyMs": 2443,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.000057
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/messy/urdu",
+      "latencyMs": 844,
+      "choice": "delivery",
+      "probability": 0.9,
+      "costUsd": 0.0000575
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/direct/urdu",
+      "latencyMs": 967,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/indirect/urdu",
+      "latencyMs": 936,
+      "choice": "payment",
+      "probability": 0.9,
+      "costUsd": 0.0000575
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/messy/urdu",
+      "latencyMs": 994,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.0000562
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/direct/urdu",
+      "latencyMs": 878,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.0000576
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/indirect/urdu",
+      "latencyMs": 1172,
+      "choice": "custom",
+      "probability": 0.9,
+      "costUsd": 0.0000583
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/messy/urdu",
+      "latencyMs": 1172,
+      "choice": "custom",
+      "probability": 0.8,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/direct/urdu",
+      "latencyMs": 1282,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000581
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/indirect/urdu",
+      "latencyMs": 1341,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000583
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/messy/urdu",
+      "latencyMs": 1361,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000566
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/direct/urdu",
+      "latencyMs": 1282,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.0000577
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/indirect/urdu",
+      "latencyMs": 1323,
+      "choice": "changes",
+      "probability": 0.9,
+      "costUsd": 0.0000583
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/messy/urdu",
+      "latencyMs": 1352,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.0000564
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/order-status/urdu",
+      "latencyMs": 856,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/complaint/urdu",
+      "latencyMs": 828,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/job-enquiry/urdu",
+      "latencyMs": 814,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/wholesale/urdu",
+      "latencyMs": 814,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/thanks/urdu",
+      "latencyMs": 828,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000564
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/greeting/urdu",
+      "latencyMs": 878,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000559
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/compliment/urdu",
+      "latencyMs": 760,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000569
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/recipe-request/urdu",
+      "latencyMs": 878,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000569
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/baking-classes/urdu",
+      "latencyMs": 773,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000566
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/invoice-request/urdu",
+      "latencyMs": 878,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000569
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/wrong-number/urdu",
+      "latencyMs": 759,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000575
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/a-product-the-answers-do-not-mention/urdu",
+      "latencyMs": 796,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/direct/mixed",
+      "latencyMs": 1236,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/indirect/mixed",
+      "latencyMs": 1219,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000573
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "prices/messy/mixed",
+      "latencyMs": 1433,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0000564
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/direct/mixed",
+      "latencyMs": 1318,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/indirect/mixed",
+      "latencyMs": 1388,
+      "choice": "hours",
+      "probability": 0.9,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "hours/messy/mixed",
+      "latencyMs": 1218,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0000562
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/direct/mixed",
+      "latencyMs": 886,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/indirect/mixed",
+      "latencyMs": 910,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000564
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "location/messy/mixed",
+      "latencyMs": 939,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0000568
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/direct/mixed",
+      "latencyMs": 888,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000562
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/indirect/mixed",
+      "latencyMs": 939,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000577
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "delivery/messy/mixed",
+      "latencyMs": 921,
+      "choice": "delivery",
+      "probability": 1,
+      "costUsd": 0.0000565
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/direct/mixed",
+      "latencyMs": 860,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/indirect/mixed",
+      "latencyMs": 867,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.0000572
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "payment/messy/mixed",
+      "latencyMs": 737,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/direct/mixed",
+      "latencyMs": 839,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.0000573
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/indirect/mixed",
+      "latencyMs": 846,
+      "choice": "custom",
+      "probability": 1,
+      "costUsd": 0.0000573
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "custom/messy/mixed",
+      "latencyMs": 772,
+      "choice": "custom",
+      "probability": 0.9,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/direct/mixed",
+      "latencyMs": 829,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000575
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/indirect/mixed",
+      "latencyMs": 829,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000578
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "dietary/messy/mixed",
+      "latencyMs": 815,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0000568
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/direct/mixed",
+      "latencyMs": 768,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/indirect/mixed",
+      "latencyMs": 815,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.0000576
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "changes/messy/mixed",
+      "latencyMs": 789,
+      "choice": "changes",
+      "probability": 1,
+      "costUsd": 0.0000564
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/order-status/mixed",
+      "latencyMs": 930,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/complaint/mixed",
+      "latencyMs": 984,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000571
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/job-enquiry/mixed",
+      "latencyMs": 860,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000566
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/wholesale/mixed",
+      "latencyMs": 922,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000565
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/thanks/mixed",
+      "latencyMs": 911,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000563
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/greeting/mixed",
+      "latencyMs": 921,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000056
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/compliment/mixed",
+      "latencyMs": 994,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000568
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/recipe-request/mixed",
+      "latencyMs": 1009,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000565
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/baking-classes/mixed",
+      "latencyMs": 1030,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/invoice-request/mixed",
+      "latencyMs": 907,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000566
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/wrong-number/mixed",
+      "latencyMs": 959,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000567
+    },
+    {
+      "contender": "google/gemini-2.5-flash-lite",
+      "caseId": "none/a-product-the-answers-do-not-mention/mixed",
+      "latencyMs": 948,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0000566
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/direct/en",
+      "latencyMs": 2273,
+      "choice": "prices",
+      "probability": 1,
+      "costUsd": 0.0001198
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/indirect/en",
+      "latencyMs": 1166,
+      "choice": "prices",
+      "probability": 0.98,
+      "costUsd": 0.000123
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/messy/en",
+      "latencyMs": 1488,
+      "choice": "prices",
+      "probability": 0.99,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/direct/en",
+      "latencyMs": 1197,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0001198
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/indirect/en",
+      "latencyMs": 1249,
+      "choice": "hours",
+      "probability": 0.99,
+      "costUsd": 0.0001228
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/messy/en",
+      "latencyMs": 1337,
+      "choice": "hours",
+      "probability": 0.99,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/direct/en",
+      "latencyMs": 2035,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.0001196
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/indirect/en",
+      "latencyMs": 1206,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/messy/en",
+      "latencyMs": 1072,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.0001214
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/direct/en",
+      "latencyMs": 1174,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.0001218
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/indirect/en",
+      "latencyMs": 1264,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.000123
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/messy/en",
+      "latencyMs": 1620,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.0001224
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/direct/en",
+      "latencyMs": 998,
+      "choice": "payment",
+      "probability": 1,
+      "costUsd": 0.00012
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/indirect/en",
+      "latencyMs": 1042,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/messy/en",
+      "latencyMs": 1117,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001216
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/direct/en",
+      "latencyMs": 1090,
+      "choice": "custom",
+      "probability": 0.99,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/indirect/en",
+      "latencyMs": 1300,
+      "choice": "custom",
+      "probability": 0.98,
+      "costUsd": 0.0001244
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/messy/en",
+      "latencyMs": 1260,
+      "choice": "custom",
+      "probability": 0.98,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/direct/en",
+      "latencyMs": 1471,
+      "choice": "dietary",
+      "probability": 1,
+      "costUsd": 0.0001212
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/indirect/en",
+      "latencyMs": 1349,
+      "choice": "dietary",
+      "probability": 0.98,
+      "costUsd": 0.0001246
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/messy/en",
+      "latencyMs": 1539,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.000123
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/direct/en",
+      "latencyMs": 1200,
+      "choice": "changes",
+      "probability": 0.99,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/indirect/en",
+      "latencyMs": 2940,
+      "choice": "changes",
+      "probability": 0.96,
+      "costUsd": 0.0001896
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/messy/en",
+      "latencyMs": 1407,
+      "choice": "changes",
+      "probability": 0.98,
+      "costUsd": 0.0001224
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/order-status/en",
+      "latencyMs": 1456,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000124
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/complaint/en",
+      "latencyMs": 1194,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001238
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/job-enquiry/en",
+      "latencyMs": 1204,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001206
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/wholesale/en",
+      "latencyMs": 1583,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001238
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/thanks/en",
+      "latencyMs": 1204,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001196
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/greeting/en",
+      "latencyMs": 1203,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001218
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/compliment/en",
+      "latencyMs": 1238,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001204
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/recipe-request/en",
+      "latencyMs": 1191,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000123
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/baking-classes/en",
+      "latencyMs": 1226,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001198
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/invoice-request/en",
+      "latencyMs": 1210,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001234
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/wrong-number/en",
+      "latencyMs": 1139,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001206
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/a-product-the-answers-do-not-mention/en",
+      "latencyMs": 1139,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/direct/roman",
+      "latencyMs": 1098,
+      "choice": "prices",
+      "probability": 0.99,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/indirect/roman",
+      "latencyMs": 1348,
+      "choice": "prices",
+      "probability": 0.98,
+      "costUsd": 0.0001228
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/messy/roman",
+      "latencyMs": 1147,
+      "choice": "prices",
+      "probability": 0.99,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/direct/roman",
+      "latencyMs": 1583,
+      "choice": "hours",
+      "probability": 0.99,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/indirect/roman",
+      "latencyMs": 1715,
+      "choice": "hours",
+      "probability": 0.99,
+      "costUsd": 0.000124
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/messy/roman",
+      "latencyMs": 2514,
+      "choice": "hours",
+      "probability": 0.98,
+      "costUsd": 0.0001728
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/direct/roman",
+      "latencyMs": 1214,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.0001224
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/indirect/roman",
+      "latencyMs": 1041,
+      "choice": "location",
+      "probability": 0.98,
+      "costUsd": 0.0001228
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/messy/roman",
+      "latencyMs": 1213,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/direct/roman",
+      "latencyMs": 1453,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.0001234
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/indirect/roman",
+      "latencyMs": 1315,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.0001236
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/messy/roman",
+      "latencyMs": 1231,
+      "choice": "delivery",
+      "probability": 0.98,
+      "costUsd": 0.0001224
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/direct/roman",
+      "latencyMs": 1312,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/indirect/roman",
+      "latencyMs": 2307,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001554
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/messy/roman",
+      "latencyMs": 1217,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/direct/roman",
+      "latencyMs": 1185,
+      "choice": "custom",
+      "probability": 0.99,
+      "costUsd": 0.0001238
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/indirect/roman",
+      "latencyMs": 3064,
+      "choice": "custom",
+      "probability": 0.96,
+      "costUsd": 0.000226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/messy/roman",
+      "latencyMs": 2124,
+      "choice": "custom",
+      "probability": 0.98,
+      "costUsd": 0.0001656
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/direct/roman",
+      "latencyMs": 1134,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.0001246
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/indirect/roman",
+      "latencyMs": 1228,
+      "choice": "dietary",
+      "probability": 0.98,
+      "costUsd": 0.0001252
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/messy/roman",
+      "latencyMs": 2023,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.0001556
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/direct/roman",
+      "latencyMs": 1082,
+      "choice": "changes",
+      "probability": 0.99,
+      "costUsd": 0.000124
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/indirect/roman",
+      "latencyMs": 3889,
+      "choice": "changes",
+      "probability": 0.93,
+      "costUsd": 0.0002834
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/messy/roman",
+      "latencyMs": 4111,
+      "choice": "none",
+      "probability": 0.93,
+      "costUsd": 0.0003618
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/order-status/roman",
+      "latencyMs": 1343,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001242
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/complaint/roman",
+      "latencyMs": 3000,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000147
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/job-enquiry/roman",
+      "latencyMs": 1343,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001246
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/wholesale/roman",
+      "latencyMs": 1333,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001242
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/thanks/roman",
+      "latencyMs": 1342,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001204
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/greeting/roman",
+      "latencyMs": 1914,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001196
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/compliment/roman",
+      "latencyMs": 1378,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001216
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/recipe-request/roman",
+      "latencyMs": 1377,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/baking-classes/roman",
+      "latencyMs": 1382,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000123
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/invoice-request/roman",
+      "latencyMs": 1565,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001676
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/wrong-number/roman",
+      "latencyMs": 1376,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/a-product-the-answers-do-not-mention/roman",
+      "latencyMs": 1630,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001542
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/direct/urdu",
+      "latencyMs": 1209,
+      "choice": "prices",
+      "probability": 0.99,
+      "costUsd": 0.0001228
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/indirect/urdu",
+      "latencyMs": 1425,
+      "choice": "prices",
+      "probability": 0.98,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/messy/urdu",
+      "latencyMs": 1355,
+      "choice": "prices",
+      "probability": 0.99,
+      "costUsd": 0.0001224
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/direct/urdu",
+      "latencyMs": 1208,
+      "choice": "hours",
+      "probability": 0.99,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/indirect/urdu",
+      "latencyMs": 2733,
+      "choice": "hours",
+      "probability": 0.99,
+      "costUsd": 0.0001976
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/messy/urdu",
+      "latencyMs": 1221,
+      "choice": "hours",
+      "probability": 0.98,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/direct/urdu",
+      "latencyMs": 1129,
+      "choice": "location",
+      "probability": 1,
+      "costUsd": 0.00012
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/indirect/urdu",
+      "latencyMs": 1298,
+      "choice": "location",
+      "probability": 0.98,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/messy/urdu",
+      "latencyMs": 1414,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.0001218
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/direct/urdu",
+      "latencyMs": 1200,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.000123
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/indirect/urdu",
+      "latencyMs": 2740,
+      "choice": "delivery",
+      "probability": 0.98,
+      "costUsd": 0.0002232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/messy/urdu",
+      "latencyMs": 1564,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.000123
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/direct/urdu",
+      "latencyMs": 1741,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/indirect/urdu",
+      "latencyMs": 1467,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/messy/urdu",
+      "latencyMs": 1552,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/direct/urdu",
+      "latencyMs": 1460,
+      "choice": "custom",
+      "probability": 0.99,
+      "costUsd": 0.0001238
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/indirect/urdu",
+      "latencyMs": 3163,
+      "choice": "custom",
+      "probability": 0.97,
+      "costUsd": 0.000234
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/messy/urdu",
+      "latencyMs": 2790,
+      "choice": "custom",
+      "probability": 0.98,
+      "costUsd": 0.0001714
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/direct/urdu",
+      "latencyMs": 1068,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.0001248
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/indirect/urdu",
+      "latencyMs": 3001,
+      "choice": "dietary",
+      "probability": 0.96,
+      "costUsd": 0.0002102
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/messy/urdu",
+      "latencyMs": 1163,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/direct/urdu",
+      "latencyMs": 1093,
+      "choice": "changes",
+      "probability": 0.99,
+      "costUsd": 0.0001236
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/indirect/urdu",
+      "latencyMs": 4499,
+      "choice": "changes",
+      "probability": 0.78,
+      "costUsd": 0.0003542
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/messy/urdu",
+      "latencyMs": 4201,
+      "choice": "changes",
+      "probability": 0.87,
+      "costUsd": 0.0003326
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/order-status/urdu",
+      "latencyMs": 1505,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001246
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/complaint/urdu",
+      "latencyMs": 1492,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001486
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/job-enquiry/urdu",
+      "latencyMs": 1296,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/wholesale/urdu",
+      "latencyMs": 1720,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001612
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/thanks/urdu",
+      "latencyMs": 1478,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001202
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/greeting/urdu",
+      "latencyMs": 1414,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001192
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/compliment/urdu",
+      "latencyMs": 1367,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001234
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/recipe-request/urdu",
+      "latencyMs": 1161,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001236
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/baking-classes/urdu",
+      "latencyMs": 1075,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/invoice-request/urdu",
+      "latencyMs": 1701,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001692
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/wrong-number/urdu",
+      "latencyMs": 2725,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000167
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/a-product-the-answers-do-not-mention/urdu",
+      "latencyMs": 1087,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001244
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/direct/mixed",
+      "latencyMs": 1175,
+      "choice": "prices",
+      "probability": 0.99,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/indirect/mixed",
+      "latencyMs": 1216,
+      "choice": "prices",
+      "probability": 0.99,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "prices/messy/mixed",
+      "latencyMs": 1255,
+      "choice": "prices",
+      "probability": 0.99,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/direct/mixed",
+      "latencyMs": 1264,
+      "choice": "hours",
+      "probability": 1,
+      "costUsd": 0.0001198
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/indirect/mixed",
+      "latencyMs": 1097,
+      "choice": "hours",
+      "probability": 0.98,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "hours/messy/mixed",
+      "latencyMs": 1071,
+      "choice": "hours",
+      "probability": 0.99,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/direct/mixed",
+      "latencyMs": 1078,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/indirect/mixed",
+      "latencyMs": 1284,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "location/messy/mixed",
+      "latencyMs": 1170,
+      "choice": "location",
+      "probability": 0.99,
+      "costUsd": 0.0001216
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/direct/mixed",
+      "latencyMs": 1100,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.000122
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/indirect/mixed",
+      "latencyMs": 1803,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.0001236
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "delivery/messy/mixed",
+      "latencyMs": 1626,
+      "choice": "delivery",
+      "probability": 0.99,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/direct/mixed",
+      "latencyMs": 1937,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001224
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/indirect/mixed",
+      "latencyMs": 1049,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "payment/messy/mixed",
+      "latencyMs": 1147,
+      "choice": "payment",
+      "probability": 0.99,
+      "costUsd": 0.0001224
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/direct/mixed",
+      "latencyMs": 1193,
+      "choice": "custom",
+      "probability": 0.99,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/indirect/mixed",
+      "latencyMs": 1400,
+      "choice": "custom",
+      "probability": 0.99,
+      "costUsd": 0.0001248
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "custom/messy/mixed",
+      "latencyMs": 2232,
+      "choice": "custom",
+      "probability": 0.99,
+      "costUsd": 0.0001654
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/direct/mixed",
+      "latencyMs": 1336,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.0001234
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/indirect/mixed",
+      "latencyMs": 1132,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.000124
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "dietary/messy/mixed",
+      "latencyMs": 1196,
+      "choice": "dietary",
+      "probability": 0.99,
+      "costUsd": 0.0001236
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/direct/mixed",
+      "latencyMs": 1191,
+      "choice": "changes",
+      "probability": 0.99,
+      "costUsd": 0.0001224
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/indirect/mixed",
+      "latencyMs": 1081,
+      "choice": "changes",
+      "probability": 0.99,
+      "costUsd": 0.0001236
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "changes/messy/mixed",
+      "latencyMs": 1268,
+      "choice": "changes",
+      "probability": 0.99,
+      "costUsd": 0.0001224
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/order-status/mixed",
+      "latencyMs": 1131,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001238
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/complaint/mixed",
+      "latencyMs": 2283,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001588
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/job-enquiry/mixed",
+      "latencyMs": 1271,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000123
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/wholesale/mixed",
+      "latencyMs": 2158,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001506
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/thanks/mixed",
+      "latencyMs": 1066,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001222
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/greeting/mixed",
+      "latencyMs": 1399,
+      "choice": "none",
+      "probability": 1,
+      "costUsd": 0.0001194
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/compliment/mixed",
+      "latencyMs": 1130,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001234
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/recipe-request/mixed",
+      "latencyMs": 1315,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001226
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/baking-classes/mixed",
+      "latencyMs": 1122,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001234
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/invoice-request/mixed",
+      "latencyMs": 1587,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001504
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/wrong-number/mixed",
+      "latencyMs": 1103,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.0001232
+    },
+    {
+      "contender": "openai/gpt-5.6-luna",
+      "caseId": "none/a-product-the-answers-do-not-mention/mixed",
+      "latencyMs": 1245,
+      "choice": "none",
+      "probability": 0.99,
+      "costUsd": 0.000123
+    }
+  ]
+}

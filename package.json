@@ -1,0 +1,21 @@
+{
+  "name": "urdu-whatsapp-decision-bench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Can a model pick which of a shop's prepared answers a WhatsApp customer is asking for, in English, Roman Urdu, Urdu script and mixed? Test set, runner and results.",
+  "scripts": {
+    "dry-run": "tsx run.ts --round 2 --dry-run",
+    "round1": "tsx run.ts --round 1",
+    "round2": "tsx run.ts --round 2",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
