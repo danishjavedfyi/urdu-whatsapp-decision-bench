@@ -88,9 +88,30 @@ Fourteen decision models were run. All of them are in
 and Gemini 2.5 Flash-Lite 20. Both were highly confident in their wrong answers, so a threshold
 does little for them.
 
-For the best models, wrong answers were spread evenly across the four written forms. What fooled
-them was not the language. It was a question that sits on an answer's topic without being settled
-by it: "Will you be open on Eid day?" got the ordinary opening hours.
+What fooled the best models was a question that sits on an answer's topic without being settled by
+it: "Will you be open on Eid day?" got the ordinary opening hours, and "Send me your bank account
+number" got the list of ways to pay. Every wrong answer Decider and Jev sent came from those two.
+
+**Language did matter here.** Asked in English, Decider and Jev chose "none" for both questions in
+all four runs. Asked in Roman Urdu, Urdu script or a mix, they picked the wrong answer in all four
+runs. Most of those picks were under the 0.8 threshold, so they were not sent.
+
+Four runs added together, 44 messages per written form:
+
+| | English | Roman Urdu | Urdu script | Mixed |
+|---|---|---|---|---|
+| Decider, wrong answers picked at any confidence | 0 | 8 | 12 | 12 |
+| Decider, wrong answers sent at 0.8 | 0 | 0 | 4 | 0 |
+| Jev, wrong answers picked at any confidence | 0 | 8 | 8 | 12 |
+| Jev, wrong answers sent at 0.8 | 0 | 4 | 3 | 4 |
+
+At a threshold of 0.9 neither model sent a wrong answer in any run. On ordinary questions Urdu
+cost these two models very little: over four runs Decider missed 0, 0, 0 and 4 of 84 per form, and
+Jev missed 1, 4, 1 and 5.
+
+*Corrected on 11 October 2026.* An earlier version of this file said wrong answers were spread
+evenly across the four written forms and that language was not what fooled the models. That was
+wrong. The result files have not changed.
 
 ## Read these numbers with care
 
