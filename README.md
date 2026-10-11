@@ -138,4 +138,9 @@ of them. The whole study, every run in `results/`, cost about 35 US cents.
 Each results file holds the cases as they were at the time, and every answer with its confidence,
 latency and cost.
 
+## Licence
+
+MIT, for the code, the test messages and the results. See `LICENSE`. Use it, extend it, and add the
+questions this set missed.
+
 Built while working on [ChatRail](https://www.chatrail.dev), a WhatsApp API for developers.
